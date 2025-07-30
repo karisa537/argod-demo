@@ -15,15 +15,15 @@ spec:
     spec:
       containers:
       - name: learn
-        image: jkalume/hello-world:v1
+        image: jkalume/hello-world:v2
         ports:
         - containerPort: 8080
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 8080
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
   strategy:
     canary:
       steps:
