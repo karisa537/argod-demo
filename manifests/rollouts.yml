@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: learn
-        image: jkalume/hello-world:v2
+        image: jkalume/hello-world:v1
         ports:
         - containerPort: 8080
         # readinessProbe:
