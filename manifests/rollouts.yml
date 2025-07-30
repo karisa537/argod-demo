@@ -3,15 +3,15 @@ kind: Rollout
 metadata:
   name: learn-rollout
   namespace: learn
-  spec:
-    replicas: 3
-    selector:
-      matchLabels:
-        app: learn
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: learn  # ✅ Required selector
   template:
     metadata:
       labels:
-        app: learn
+        app: learn  # ✅ Matches selector
     spec:
       containers:
       - name: learn
@@ -42,7 +42,7 @@ metadata:
   namespace: learn
 spec:
   selector:
-    app: learn
+    app: learn  # ✅ Matches rollout pods
   ports:
   - protocol: TCP
     port: 8080
